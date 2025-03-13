@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_midi_command/flutter_midi_command.dart';
 import 'dart:typed_data';
+import 'midi_command_factory.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,7 @@ class MidiControllerPage extends StatefulWidget {
 }
 
 class _MidiControllerPageState extends State<MidiControllerPage> {
-  final MidiCommand _midiCommand = MidiCommand();
+  final MidiCommand _midiCommand = MidiCommandFactory.createMidiCommand();
   List<MidiDevice>? _devices;
   MidiDevice? _selectedDevice;
   int _selectedChannel = 1;

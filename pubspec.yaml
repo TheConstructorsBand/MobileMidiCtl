@@ -21,10 +21,10 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.3.1 <4.0.0'
 
-# Platform-specific configuration
+# Platform-specific configuration to exclude win32 on iOS
 dependency_overrides:
-  win32: 
-    version: ^5.5.0
+  win32: 'any'
+  flutter_midi_command_platform_interface: '>=0.4.0 <0.5.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
