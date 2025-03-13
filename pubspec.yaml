@@ -37,6 +37,12 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_midi_command: ^0.5.3
 
+  # Platform-specific dependencies
+  win32: ^5.5.0
+    # Ensure win32 is only used on Windows
+    platforms:
+      windows: '>=3.0.0'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
